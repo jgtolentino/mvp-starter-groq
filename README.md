@@ -1,83 +1,105 @@
-<a href="https://ai-sdk-starter-groq.vercel.app">
-  <h1 align="center">Vercel x Groq Chatbot</h1>
-</a>
+# JTI Analytics Dashboard
 
-<p align="center">
-  An open-source AI chatbot app template built with Next.js, the AI SDK by Vercel, and Groq.
-</p>
+Real-time market intelligence platform for Japan Tobacco International Philippines.
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#running-locally"><strong>Running Locally</strong></a> ·
-  <a href="#authors"><strong>Authors</strong></a>
-</p>
-<br/>
+## Overview
+
+This dashboard provides comprehensive analytics for JTI's operations in the Philippine market, including:
+- Real-time sales tracking
+- Competitive intelligence
+- Geographic performance analysis
+- Consumer behavior insights
+- Brand switching patterns
 
 ## Features
 
-- Streaming text responses powered by the [AI SDK by Vercel](https://sdk.vercel.ai/docs), allowing multiple AI providers to be used interchangeably with just a few lines of code.
-- Built-in tool integration for extending AI capabilities (demonstrated with a weather tool example).
-- Reasoning model support.
-- [shadcn/ui](https://ui.shadcn.com/) components for a modern, responsive UI powered by [Tailwind CSS](https://tailwindcss.com).
-- Built with the latest [Next.js](https://nextjs.org) App Router.
+### 📊 Analytics
+- **Sales Dashboard**: Real-time sales metrics and trends
+- **Geographic Analysis**: Interactive maps showing regional performance
+- **Product Performance**: SKU-level analytics with market share tracking
+- **Consumer Insights**: Purchase patterns and brand loyalty analysis
 
-## Deploy Your Own
+### 🎯 JTI-Specific Features
+- Winston, Mevius, Camel, Mighty brand tracking
+- Competitor analysis (Marlboro, Fortune)
+- Sari-sari store performance metrics
+- Sin tax impact modeling
 
-You can deploy your own version to Vercel by clicking the button below:
+### 🔧 Technical Features
+- React 18 + TypeScript
+- Vite for fast development
+- Tailwind CSS for styling
+- Supabase for real-time data
+- AI-powered insights (OpenAI/Anthropic)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?project-name=Vercel+x+Groq+Chatbot&repository-name=ai-sdk-starter-groq&repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-starter-groq&demo-title=Vercel+x+Groq+Chatbot&demo-url=https%3A%2F%2Fai-sdk-starter-groq.labs.vercel.dev%2F&demo-description=A+simple+chatbot+application+built+with+Next.js+that+uses+Groq+via+the+AI+SDK+and+the+Vercel+Marketplace&products=%5B%7B%22type%22%3A%22integration%22%2C%22protocol%22%3A%22ai%22%2C%22productSlug%22%3A%22api-key%22%2C%22integrationSlug%22%3A%22groq%22%7D%5D)
+## Quick Start
 
-## Running Locally
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Supabase account
 
-1. Clone the repository and install dependencies:
+### Installation
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
+1. Clone and install dependencies:
+\`\`\`bash
+npm install
+\`\`\`
 
-2. Install the [Vercel CLI](https://vercel.com/docs/cli):
+2. Set up environment variables:
+\`\`\`bash
+cp .env.example .env.local
+# Edit .env.local with your Supabase credentials
+\`\`\`
 
-   ```bash
-   npm i -g vercel
-   # or
-   yarn global add vercel
-   # or
-   pnpm install -g vercel
-   ```
+3. Run development server:
+\`\`\`bash
+npm run dev
+\`\`\`
 
-   Once installed, link your local project to your Vercel project:
+## Deployment
 
-   ```bash
-   vercel link
-   ```
+### Vercel (Recommended)
+1. Connect GitHub repository to Vercel
+2. Set environment variables in Vercel dashboard
+3. Deploy with automatic CI/CD
 
-   After linking, pull your environment variables:
+### Manual Deployment
+\`\`\`bash
+npm run build
+# Deploy dist/ folder to your hosting service
+\`\`\`
 
-   ```bash
-   vercel env pull
-   ```
+## Project Structure
 
-   This will create a `.env.local` file with all the necessary environment variables.
+\`\`\`
+src/
+├── components/     # Reusable UI components
+├── pages/         # Route pages
+├── services/      # API and data services
+├── hooks/         # Custom React hooks
+├── utils/         # Utility functions
+├── lib/           # External library configs
+└── config/        # App configuration
 
-3. Run the development server:
+data/
+├── jti-actual-skus-philippines.json
+└── jti-sample-data.json
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
+supabase/
+└── migrations/    # Database schema
+\`\`\`
 
-4. Open [http://localhost:3000](http://localhost:3000) to view your new AI chatbot application.
+## Security
 
-## Authors
+- All API keys should be kept in environment variables
+- Row Level Security (RLS) enabled on all tables
+- Authentication required for write operations
 
-This repository is maintained by the [Vercel](https://vercel.com) team and community contributors.
+## Support
 
-Contributions are welcome! Feel free to open issues or submit pull requests to enhance functionality or fix bugs.
+For issues or questions, contact the TBWA Analytics team.
+
+---
+
+Built with ❤️ by TBWA Analytics for JTI Philippines
